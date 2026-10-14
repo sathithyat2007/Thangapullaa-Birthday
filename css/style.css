@@ -1,0 +1,1154 @@
+
+/* ========================================
+   FOR MY THANGAPULLAA 🎀
+   Baby Pink Birthday Website
+======================================== */
+
+:root {
+    --pink-bg: #ffe5ee;
+    --pink-light: #fff3f7;
+    --pink-soft: #ffd1e0;
+    --pink: #f56b9c;
+    --pink-dark: #c93470;
+    --pink-deep: #b92863;
+    --white: #ffffff;
+    --text: #bd4779;
+    --shadow: rgba(224, 76, 132, 0.20);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Comfortaa", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at 50% 40%, #fff4f8 0%, transparent 65%),
+        linear-gradient(135deg, #ffebf2, #ffd9e7, #ffeaf2);
+}
+
+/* Soft glowing background */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 15% 20%, #ffffff80, transparent 22%),
+        radial-gradient(circle at 85% 70%, #ffb6d280, transparent 25%);
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    min-height: 76px;
+    padding: 15px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(255, 231, 240, 0.88);
+    border-bottom: 1px solid #ffffffa8;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--pink-dark);
+    text-decoration: none;
+    font-family: "Pacifico", cursive;
+    font-size: 19px;
+    white-space: nowrap;
+}
+
+.logo-heart {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: linear-gradient(135deg, #ffffff, #ffd0e1);
+    box-shadow: 0 3px 12px var(--shadow);
+    font-size: 28px;
+}
+
+.tiny-heart {
+    color: var(--pink);
+    animation: heartbeat 1.5s infinite;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #bb5880;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--pink-dark);
+    background: #ffffff8a;
+    transform: translateY(-2px);
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: -5px;
+    height: 3px;
+    border-radius: 10px;
+    background: var(--pink);
+}
+
+/* FLOATING HEARTS */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -60px;
+    color: #f45b96;
+    opacity: 0;
+    font-size: 20px;
+    text-shadow: 0 0 12px #ff8fbb;
+    animation: floatUp linear forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(0.7);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate3d(25px, -50vh, 0) rotate(18deg) scale(1);
+        opacity: 0.75;
+    }
+
+    90% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translate3d(-20px, -110vh, 0) rotate(-18deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* OPENING PAGE */
+
+.hero {
+    min-height: calc(100vh - 76px);
+    min-height: max(700px, calc(100svh - 76px));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 125px;
+    isolation: isolate;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+    animation: fadeIn 1.2s ease both;
+}
+
+.hey-text {
+    margin-bottom: 15px;
+    font-family: "Pacifico", cursive;
+    font-size: clamp(26px, 4vw, 43px);
+    transform: rotate(-3deg);
+}
+
+.main-title {
+    position: relative;
+    display: inline-block;
+    margin: 5px 0 20px;
+    color: var(--pink-dark);
+    font-family: "Pacifico", cursive;
+    font-size: clamp(43px, 8.5vw, 96px);
+    font-weight: 400;
+    line-height: 1.35;
+    text-shadow: 0 5px 0 #ffffff75;
+    overflow-wrap: anywhere;
+}
+
+.title-heart {
+    display: inline-block;
+    margin-left: 10px;
+    color: #ed4f8b;
+    animation: heartbeat 1.6s infinite;
+}
+
+.subtitle {
+    margin-top: 15px;
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 1.8;
+}
+
+.from-text {
+    margin-top: 5px;
+    font-family: "Pacifico", cursive;
+    font-size: clamp(18px, 2.5vw, 26px);
+}
+
+.title-underline {
+    width: 125px;
+    height: 4px;
+    margin: 18px auto 38px;
+    border-radius: 50%;
+    background: var(--pink);
+    transform: rotate(-5deg);
+}
+
+/* SURPRISE BUTTON */
+
+.surprise-button,
+.pink-button {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff86b1, #eb4288);
+    box-shadow:
+        0 9px 25px rgba(224, 57, 119, 0.25),
+        inset 0 2px 5px #ffffff80;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.surprise-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    min-height: 76px;
+    padding: 18px 34px;
+    border-radius: 50px;
+    font-size: clamp(13px, 2vw, 17px);
+    animation: buttonGlow 2.5s infinite;
+}
+
+.surprise-button:hover,
+.pink-button:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 14px 30px rgba(224, 57, 119, 0.32);
+}
+
+.surprise-button:active,
+.pink-button:active {
+    transform: scale(0.97);
+}
+
+.gift-icon {
+    font-size: 25px;
+}
+
+.arrow {
+    font-size: 23px;
+    transition: transform 0.3s ease;
+}
+
+.surprise-button:hover .arrow {
+    transform: translateX(6px);
+}
+
+.button-hint {
+    margin-top: 15px;
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* DECORATIONS */
+
+.side-note {
+    position: absolute;
+    max-width: 170px;
+    font-family: "Pacifico", cursive;
+    font-size: 15px;
+    line-height: 1.9;
+    opacity: 0.9;
+}
+
+.left-note {
+    left: 7%;
+    top: 32%;
+    transform: rotate(-9deg);
+}
+
+.right-note {
+    right: 6%;
+    top: 39%;
+    transform: rotate(5deg);
+}
+
+.smile {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 27px;
+}
+
+.cute-doodle {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    font-family: "Pacifico", cursive;
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: center;
+    transform: rotate(-7deg);
+}
+
+.cute-doodle span {
+    font-size: 12px;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transform: translateX(-50%);
+    color: var(--pink-dark);
+    text-decoration: none;
+    font-family: "Pacifico", cursive;
+    font-size: 14px;
+    animation: gentleBounce 2s infinite;
+}
+
+.scroll-down span:first-child {
+    font-family: sans-serif;
+    font-size: 26px;
+}
+
+.love-meter {
+    position: absolute;
+    left: 4%;
+    bottom: 30px;
+    width: 145px;
+    font-family: "Pacifico", cursive;
+    font-size: 11px;
+}
+
+.meter-track {
+    height: 13px;
+    margin-top: 8px;
+    padding: 2px;
+    border: 1px solid var(--pink);
+    border-radius: 20px;
+}
+
+.meter-fill {
+    height: 100%;
+    width: 68%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff7eac, #f43e83);
+    animation: loadingLove 3s ease-in-out infinite alternate;
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 85px 24px;
+    scroll-margin-top: 75px;
+}
+
+.section-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 55px);
+    text-align: center;
+    border: 2px solid #ffffffb0;
+    border-radius: 32px;
+    background: rgba(255, 248, 251, 0.73);
+    box-shadow: 0 15px 45px var(--shadow);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-4px);
+}
+
+.section-emoji {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 43px;
+    animation: gentleBounce 3s infinite;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: #e45b91;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-card h2,
+.section-heading h2 {
+    margin-bottom: 22px;
+    color: var(--pink-dark);
+    font-family: "Pacifico", cursive;
+    font-size: clamp(27px, 5vw, 43px);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.section-description,
+.section-card > p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.sweet-line,
+.letter-signature,
+.big-final-message {
+    margin-top: 23px;
+    color: var(--pink-dark);
+    font-family: "Pacifico", cursive;
+    font-size: 19px;
+}
+
+.pink-button {
+    margin-top: 25px;
+    padding: 15px 24px;
+    border-radius: 35px;
+    font-size: 13px;
+}
+
+/* MEMORIES */
+
+.section-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.section-heading > p:last-child {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.memory-card {
+    padding: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background: rgba(255, 248, 251, 0.8);
+    box-shadow: 0 12px 35px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-7px) rotate(-1deg);
+}
+
+.memory-placeholder {
+    min-height: 210px;
+    display: grid;
+    place-items: center;
+    border: 2px dashed #f6a1c0;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #ffe2ed, #fff5f8);
+    font-size: 55px;
+}
+
+.memory-card h3 {
+    margin: 20px 0 12px;
+    color: var(--pink-dark);
+    font-family: "Pacifico", cursive;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.memory-card p {
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.memory-card .photo-instruction {
+    margin-top: 12px;
+    color: #dc5289;
+    font-weight: 700;
+}
+
+/* LETTER */
+
+.letter-card > p:not(.eyebrow) {
+    margin-top: 16px;
+}
+
+.letter-signature {
+    line-height: 1.9 !important;
+}
+
+.hug-message,
+.wish-message {
+    min-height: 25px;
+    margin-top: 18px;
+    color: var(--pink-dark);
+    font-family: "Pacifico", cursive;
+    line-height: 1.8;
+}
+
+.cake {
+    margin: 20px 0;
+    font-size: 85px;
+    animation: cakeBounce 2s infinite;
+}
+
+.big-final-message {
+    font-size: clamp(20px, 4vw, 30px);
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: #ffd8e6a8;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes buttonGlow {
+    0%, 100% {
+        box-shadow: 0 8px 22px #e74b8a30, inset 0 2px 5px #ffffff80;
+    }
+
+    50% {
+        box-shadow: 0 8px 30px #e74b8a65, inset 0 2px 5px #ffffffa0;
+    }
+}
+
+@keyframes gentleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes cakeBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+@keyframes loadingLove {
+    from {
+        width: 30%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* ACCESSIBILITY */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #bd3472;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 12px;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-link {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 760px;
+    }
+
+    .side-note {
+        font-size: 12px;
+        max-width: 115px;
+    }
+
+    .left-note {
+        left: 3%;
+        top: 15%;
+    }
+
+    .right-note {
+        right: 3%;
+        top: 17%;
+    }
+
+    .cute-doodle {
+        right: 4%;
+        bottom: 8%;
+        font-size: 16px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 3px;
+        padding: 7px 4px;
+        font-size: 10px;
+    }
+
+    .nav-link.active::after {
+        bottom: 0;
+    }
+
+    .hero {
+        min-height: 700px;
+        padding: 100px 16px 130px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hey-text {
+        font-size: 27px;
+    }
+
+    .main-title {
+        font-size: clamp(35px, 10vw, 52px);
+        margin: 12px 0;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .from-text {
+        font-size: 19px;
+    }
+
+    .title-underline {
+        margin-bottom: 30px;
+    }
+
+    .surprise-button {
+        min-height: 60px;
+        gap: 9px;
+        padding: 14px 20px;
+        font-size: 12px;
+    }
+
+    .side-note {
+        font-size: 10px;
+        line-height: 1.6;
+        max-width: 90px;
+    }
+
+    .left-note {
+        top: 5%;
+        left: 4%;
+    }
+
+    .right-note {
+        top: 7%;
+        right: 3%;
+    }
+
+    .cute-doodle {
+        right: 3%;
+        bottom: 6%;
+        font-size: 13px;
+    }
+
+    .cute-doodle span {
+        font-size: 9px;
+    }
+
+    .love-meter {
+        left: 4%;
+        bottom: 25px;
+        width: 100px;
+        font-size: 9px;
+    }
+
+    .scroll-down {
+        bottom: 22px;
+        font-size: 11px;
+    }
+
+    .content-section {
+        padding: 55px 15px;
+    }
+
+    .section-card {
+        padding: 28px 20px;
+        border-radius: 25px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-placeholder {
+        min-height: 190px;
+    }
+
+    .section-card h2,
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-description,
+    .section-card > p {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   ROMANTIC MEMORIES — SOFT PINK DREAMS 💗
+========================================== */
+
+#memories {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(ellipse at 10% 15%, rgba(255, 182, 210, 0.24), transparent 45%),
+        radial-gradient(ellipse at 90% 80%, rgba(230, 190, 255, 0.20), transparent 45%);
+}
+
+/* Soft romantic heading glow */
+#memories .section-heading h2 {
+    color: #c65383;
+    text-shadow: 0 0 22px rgba(255, 143, 190, 0.28);
+}
+
+#memories .section-heading .eyebrow {
+    letter-spacing: 3px;
+    color: #d477a0;
+}
+
+/* Dreamy memory cards */
+#memories .memory-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 160, 200, 0.35);
+    border-radius: 24px;
+    background: rgba(255, 245, 250, 0.78);
+    box-shadow: 0 10px 30px rgba(205, 105, 150, 0.10);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+    animation: memoryDream 5s ease-in-out infinite;
+}
+
+#memories .memory-card:nth-child(2) {
+    animation-delay: -2.5s;
+}
+
+#memories .memory-card:hover {
+    transform: translateY(-9px) scale(1.015);
+    border-color: rgba(255, 130, 180, 0.65);
+    box-shadow:
+        0 18px 40px rgba(205, 105, 150, 0.18),
+        0 0 24px rgba(255, 170, 205, 0.20);
+}
+
+/* Tiny heart in every memory card */
+#memories .memory-card::after {
+    content: "♡";
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    color: #ec8db4;
+    font-size: 27px;
+    opacity: 0.75;
+    pointer-events: none;
+    animation: heartDream 3s ease-in-out infinite;
+}
+
+/* Glowing photo/video placeholders */
+#memories .memory-placeholder {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 210, 228, 0.95),
+            rgba(255, 238, 246, 0.95),
+            rgba(238, 220, 255, 0.85)
+        );
+    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.65);
+    transition: box-shadow 0.4s ease;
+}
+
+#memories .memory-card:hover .memory-placeholder {
+    box-shadow:
+        inset 0 0 25px rgba(255, 255, 255, 0.8),
+        0 0 22px rgba(255, 150, 195, 0.3);
+}
+
+/* Gentle glow around the future photo memories */
+#memories .memory-placeholder::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        110deg,
+        transparent 25%,
+        rgba(255, 255, 255, 0.45) 48%,
+        transparent 70%
+    );
+    transform: translateX(-110%);
+    animation: memoryShimmer 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+#memories .photo-instruction {
+    color: #c56c96;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+/* Dreamy animations */
+@keyframes memoryDream {
+    0%, 100% {
+        box-shadow: 0 10px 30px rgba(205, 105, 150, 0.10);
+    }
+    50% {
+        box-shadow: 0 13px 34px rgba(205, 105, 150, 0.17);
+    }
+}
+
+@keyframes heartDream {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.65;
+    }
+    50% {
+        transform: translateY(-5px) scale(1.15);
+        opacity: 1;
+    }
+}
+
+@keyframes memoryShimmer {
+    0%, 65%, 100% {
+        transform: translateX(-110%);
+    }
+    85% {
+        transform: translateX(110%);
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    #memories .memory-card,
+    #memories .memory-card::after,
+    #memories .memory-placeholder::after {
+        animation: none;
+    }
+
+    #memories .memory-card {
+        transition: none;
+    }
+}
+
+/* ==========================================
+   DREAMY SECRET LETTER ANIMATION 💌
+========================================== */
+
+/* Envelope */
+.letter-envelope {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: drop-shadow(0 8px 16px rgba(230, 130, 175, 0.18));
+}
+
+.letter-envelope:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 12px 22px rgba(230, 100, 160, 0.28));
+}
+
+/* Envelope flap opens when clicked */
+.letter-envelope .envelope-flap {
+    transform-origin: top center;
+    transition: transform 0.7s ease;
+    backface-visibility: hidden;
+}
+
+.letter-envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+/* Letter paper inside the envelope */
+.letter-envelope .envelope-paper {
+    transition: transform 0.8s ease;
+}
+
+.letter-envelope.open .envelope-paper {
+    transform: translateY(-25px);
+}
+
+/* Letter content appears gently */
+#letterContent[hidden],
+#secretMessage[hidden] {
+    display: none !important;
+}
+
+#letterContent:not([hidden]) {
+    animation: dreamyLetterReveal 0.9s ease both;
+}
+
+#secretMessage:not([hidden]) {
+    animation: dreamySecretReveal 0.8s ease both;
+}
+
+#letterContent .letter-paper {
+    border-color: rgba(255, 160, 200, 0.45);
+    box-shadow:
+        0 12px 35px rgba(220, 120, 170, 0.13),
+        0 0 25px rgba(255, 190, 220, 0.18);
+}
+
+#letterContent .letter-greeting {
+    color: #cf6796;
+}
+
+#letterContent .letter-signature span {
+    color: #d45d92;
+}
+
+#secretMessage .secret-big-heart {
+    display: inline-block;
+    animation: secretHeartBeat 1.5s ease-in-out infinite;
+}
+
+@keyframes dreamyLetterReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dreamySecretReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes secretHeartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.14);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .letter-envelope,
+    .letter-envelope .envelope-flap,
+    .letter-envelope .envelope-paper,
+    #letterContent:not([hidden]),
+    #secretMessage:not([hidden]),
+    #secretMessage .secret-big-heart {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* MEMORY PHOTO STYLE */
+.memory-placeholder {
+    overflow: hidden;
+    padding: 10px;
+    background: #fff8fc;
+    border: 3px solid #f5c6dc;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(230, 140, 180, 0.2);
+}
+
+.memory-placeholder img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.memory-placeholder:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Center the entire memory card */
+#memories .memory-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#memories .memory-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* Show the full original photo without cropping */
+#memories .memory-placeholder {
+    height: auto;
+    max-width: 350px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#memories .memory-placeholder img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
